@@ -21,7 +21,15 @@
 
 //CODE HERE
 
-
+class employee{
+    constructor(name, shifts){
+        this.name= name
+        this.shifts= shifts
+    }
+    getSchedule(){
+        console.log(`${this.name} work son ${this.shifts} `)
+    }
+}
 
 /*
     Create a new instance of your class.
@@ -34,6 +42,9 @@
 */
 
 //CODE HERE
+let empOne= new employee(`Jess`, `weekday mornings, weekday afternoons` )
+
+
 
 /*
     Call the `getSchedule` method on the
@@ -41,6 +52,7 @@
 */
 
 //CODE HERE
+empOne.getSchedule()
 
 
 /*
@@ -57,6 +69,7 @@
 
 //CODE HERE
 
+let empTwo= new employee(`Nick`, `weekday mornings, weekday afternoons` )
 
 
 //////////////////PROBLEM 2////////////////////
@@ -83,8 +96,15 @@
 */
 
 //CODE HERE
-
-
+class Manager extends employee{
+    constructor(name, shifts, employees){
+        super (name, shifts)
+        this.employees= employees
+    }
+}
+addEmployee(emp){
+   emp.push()
+}
 
 /*
     Create a new instance of your class.
