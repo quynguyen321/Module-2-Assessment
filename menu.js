@@ -31,6 +31,14 @@
 */
 
 //CODE HERE
+const pizza = {
+    name: `f13 special`,
+    price: 20,
+    category: `entree`,
+    popularity: 10,
+    rating: 10,
+    tags: [`gluten-free`,  `dank`,  `special`, `f13`, `for the people`,]
+}
 
 
 
@@ -43,7 +51,8 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
+console.log(pizza[`popularity`])
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +62,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,8 +72,11 @@
 */
 
 //CODE HERE
-
-
+let{ price, popularity }= pizza
+console.log(price)
+price = 10.99
+let{price: price2}= pizza;
+console.log(price)
 /*
     Fourth, and last, destructure the category
     property.
@@ -73,7 +85,8 @@
 */
 
 //CODE HERE
-
+const{category } =pizza;
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +101,50 @@
 */
 
 //CODE HERE
-
+const foodArr = [
+    
+        {
+            name: `pizza1`,
+            price: 32,
+            category: `entree`,
+            popularity: 0,
+            rating: 3,
+            tags: [`gluten-free`,  `dank`,  ]
+        },
+         {
+            name: `pizza2`,
+            price: 30,
+            category: `entree`,
+            popularity: 6,
+            rating: 7,
+            tags: [`special`, `f13`, `for the people`,]
+        } ,
+        {
+            name: `pizza3`,
+            price: 5,
+            category: `entree`,
+            popularity: 1,
+            rating: 2,
+            tags: [`gluten-free`, `for the people`,],
+        } ,
+        {
+            name: `pizza4`,
+            price: 200,
+            category: `entree`,
+            popularity: 6,
+            rating: 4,
+            tags: [`for the people`,],
+        } ,
+        {
+            name: `pizza`,
+            price: 25,
+            category: `entree`,
+            popularity: 8,
+            rating: 9,
+            tags: [`special`, ],
+        
+    }
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,7 +161,15 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(function(pizzaObj){
+//return pizzaObj.tags.includes(`special`)
+let toSave =false;
+ for(let i = 0; i<pizzaObj.tags.length; i++){
+     if(pizzaObj.tags[i]=== `special`) toSave = true;
+ }
+ return toSave;
+})
+console.log(filteredFood)
 
 
 
@@ -149,8 +213,12 @@
 */
 
 //CODE HERE
+function filterByProperty(property, number, type){
+    property= String(property)
+    number= number
+    
 
-
+}
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.

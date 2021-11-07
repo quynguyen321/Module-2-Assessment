@@ -109,7 +109,7 @@ const deals = [
     }, 
     {
         title: 'Free Kids Meal with 2 Regular Entrees', 
-        desc: '   This deal lasts until the end of March! '
+        desc: '   This deal lasts until the end of March! ',
     }
 ]
 
@@ -123,9 +123,8 @@ const deals = [
 */
 
 //CODE HERE
-
-deals.splice(1,1 `10%`)
-
+let newstr = deals[0].title.replace("15% Off", "10% Off");
+console.log(newstr);
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -140,3 +139,5 @@ deals.splice(1,1 `10%`)
 */
 
 //CODE HERE
+let newstr1 = deals[1].desc.replace("March!", "April!");
+console.log(newstr1);

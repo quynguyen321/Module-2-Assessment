@@ -35,9 +35,15 @@ const cart = [
 
 //CODE HERE
 
-const summedPrice = cart.reduce(function(acc, elem) {
-    return acc + elem.price
-}, )
+function totalPrice(cart) {
+    const summedPrice = cart.reduce(function (acc, elem) {
+      return { price: acc.price + elem.price };
+    });
+  
+    return summedPrice.price;
+  }
+  
+  console.log(totalPrice(cart));
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -55,12 +61,12 @@ const summedPrice = cart.reduce(function(acc, elem) {
 */
 
 //CODE HERE
-
 function calFinalPrice(cartTotal, couponValue, tax) {
-    return ((cartTotal * tax) - couponValue)
-}
-    let tax = 1.06
-
+    const logic = cartTotal * tax - couponValue;
+    return logic;
+  }
+  
+  console.log(calFinalPrice(totalPrice(cart), 2, 1.06));
 
 //////////////////PROBLEM 3////////////////////
 /*  

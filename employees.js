@@ -96,16 +96,25 @@ let empTwo= new employee(`Nick`, `weekday mornings, weekday afternoons` )
 */
 
 //CODE HERE
-class Manager extends employee{
-    constructor(name, shifts, employees){
-        super (name, shifts)
-        this.employees= employees
+class Manager extends employee {
+    constructor(name, shifts, employees) {
+      super(name, shifts);
+      this.employees = [];
     }
-}
-addEmployee(emp){
-   emp.push()
-}
+    getEmployees() {
+      console.log(this.employees);
+    }
+  
+    addEmployee(emp) {
+      this.employees.push(emp);
+    }
+  }
+  
+  let listOfEmployees = new Manager();
 
+  listOfEmployees.addEmployee(empTwo);
+  listOfEmployees.addEmployee(empOne);
+  listOfEmployees.getEmployees();
 /*
     Create a new instance of your class.
     Save it to a variable called `manager`.
@@ -118,6 +127,9 @@ addEmployee(emp){
 */
 
 //CODE HERE
+let empThree = new Manager('Winston', `weekday mornings, weekday afternoons`, )
+
+
 
 
 /*
@@ -125,7 +137,6 @@ addEmployee(emp){
     `manager` object.  
 */
 
-//CODE HERE
 
 /*
     Call the `addEmployee` method on the 
@@ -134,7 +145,8 @@ addEmployee(emp){
 */
 
 //CODE HERE 
-
+listOfEmployees.getEmployees(empThree);
+listOfEmployees.addEmployee(empThree);
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -142,3 +154,4 @@ addEmployee(emp){
 */
 
 //CODE HERE
+listOfEmployees.getEmployees(empThree);
